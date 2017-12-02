@@ -13,7 +13,6 @@
   }
   .friends li {
     cursor: pointer;
-    display: inline-block;
     float: left;
     clear: both;
     position: relative;
