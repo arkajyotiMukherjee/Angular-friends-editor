@@ -1,0 +1,23 @@
+
+
+<h2>My Friends</h2>
+<ul class="friends">
+  <li  *ngFor="let friend of friends" [class.selected]="friend === selectedFriend" (click)="onSelect(friend)">
+    <span class="badge" style="color:rgb(27, 255, 6)">Name:</span>{{friend.name}}
+     <span style="color:rgb(19, 218, 253)">=></span>
+    <span  style="color:blueviolet">Super Power:</span>{{friend.super_power}}
+    <br><br>
+  </li>
+</ul>
+
+<div  *ngIf="selectedFriend">
+  <h2>{{selectedFriend.name | uppercase}}'s Details</h2>
+  <div>
+    <span style="color:blueviolet">Super Power:</span> {{selectedFriend.super_power}}</div>
+
+  <div >
+    <label>name:
+      <input [(ngModel)]="selectedFriend.name" placeholder="name">
+    </label>
+  </div>
+</div>
